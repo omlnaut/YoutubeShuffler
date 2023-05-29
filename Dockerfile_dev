@@ -1,0 +1,8 @@
+FROM python:3.10.8-buster
+WORKDIR /app
+
+RUN pip install black
+RUN pip install jupyterlab
+
+COPY requirements.txt .
+RUN pip install -r requirements.txt
